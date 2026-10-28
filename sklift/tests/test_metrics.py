@@ -425,7 +425,7 @@ def test_uplift_at_k_bygroup_treatment_message():
 	uplift = np.array([0.9, 0.8, 0.7, 0.6, 0.5, 0.4])
 	treatment = np.array([1, 1, 0, 0, 0, 0])
 
-	with pytest.raises(ValueError, match = 'in the treatment group:2'):
+	with pytest.raises(ValueError, match = 'in the treatment group: 2'):
 		uplift_at_k(y_true, uplift, treatment, strategy = 'by_group', k=3)
 
 
